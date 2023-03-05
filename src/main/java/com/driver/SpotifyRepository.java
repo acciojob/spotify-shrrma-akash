@@ -101,7 +101,7 @@ public class SpotifyRepository {
         if(albumSongMap.containsKey(newAlbum)){
             listOfSongs=albumSongMap.get(newAlbum);
         }
-
+        listOfSongs.add(song);
         albumSongMap.put(newAlbum,listOfSongs);
 
         return song;
