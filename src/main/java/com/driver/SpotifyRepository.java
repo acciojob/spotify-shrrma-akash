@@ -209,7 +209,7 @@ public class SpotifyRepository {
             userplaylists=userPlaylistMap.get(currentUser);
         }
         userplaylists.add(newPlaylist);
-
+        userPlaylistMap.put(currentUser,userplaylists);
         return newPlaylist;
 
     }
@@ -328,7 +328,7 @@ public class SpotifyRepository {
                     break;
                 }
             }
-
+            artist.setLikes(artist.getLikes()+1);
         }
         return song;
 
